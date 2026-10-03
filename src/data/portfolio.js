@@ -1,51 +1,51 @@
 export const PROJECTS_DETAILED = [
   {
     id: 1,
-    title: 'Portfolio Revamp',
+    title: 'Modern Portfolio Website',
     type: 'Personal Brand',
     description:
-      'Rebuilt a modern portfolio experience with a conversion-focused layout and premium visual storytelling.',
+      'A fully responsive portfolio website built with React and Vite. Features multi-page routing, smooth animations, and a contact form.',
     fullDescription:
-      'A complete redesign of my personal portfolio to better showcase my work and attract new clients. The new version features a modern design, improved performance, and better mobile responsiveness.',
-    stack: ['React', 'CSS', 'Vite'],
+      'A complete personal portfolio redesign showcasing my work as a frontend developer. Includes a landing page with featured projects, a dedicated projects page, case studies, blog section, resume, and a fully functional contact page. Built with React 18, React Router, and modern CSS.',
+    stack: ['React', 'React Router', 'CSS', 'Vite'],
     image: '',
     liveUrl: '',
-    githubUrl: '',
+    githubUrl: 'https://github.com/otienovictor717-svg/odero-victor-portfolio',
   },
   {
     id: 2,
-    title: 'TaskFlow Dashboard',
-    type: 'Productivity App',
+    title: 'Dynamic Task Management Dashboard',
+    type: 'Web Application',
     description:
-      'Designed a product dashboard to help teams organize work, track progress, and improve accountability.',
+      'A productivity tool designed for teams to organize work, track progress, and improve accountability with real-time updates.',
     fullDescription:
-      'A comprehensive task management platform built with React and Node.js. Features real-time updates, team collaboration tools, and advanced filtering capabilities.',
-    stack: ['React', 'Node.js', 'MongoDB', 'API'],
+      'A comprehensive task management platform with features including real-time task updates, team collaboration tools, advanced filtering, and progress tracking. Designed to improve team productivity and project visibility.',
+    stack: ['React', 'Node.js', 'MongoDB', 'REST API'],
     image: '',
     liveUrl: '',
     githubUrl: '',
   },
   {
     id: 3,
-    title: 'E-commerce Storefront',
-    type: 'Retail Experience',
+    title: 'E-commerce Shopping Platform',
+    type: 'Full-Stack Project',
     description:
-      'Created a polished storefront experience focused on usability, product discovery, and cleaner conversion paths.',
+      'A polished online storefront focused on user experience, product discovery, and smooth checkout process.',
     fullDescription:
-      'A full-featured e-commerce platform with product browsing, shopping cart, checkout, and payment integration. Built with modern best practices for performance and accessibility.',
-    stack: ['JavaScript', 'CSS', 'UX Design', 'Stripe API'],
+      'A full-featured e-commerce platform with product browsing, advanced filtering, shopping cart management, secure checkout, and payment integration. Built with modern best practices for performance, accessibility, and user experience.',
+    stack: ['JavaScript', 'CSS', 'Stripe API', 'Node.js'],
     image: '',
     liveUrl: '',
     githubUrl: '',
   },
   {
     id: 4,
-    title: 'Analytics Dashboard',
+    title: 'Analytics Dashboard with Data Visualization',
     type: 'Data Visualization',
     description:
-      'Built an interactive analytics dashboard for tracking user behavior and business metrics in real-time.',
+      'An interactive dashboard for tracking user behavior and business metrics in real-time with beautiful charts.',
     fullDescription:
-      'A sophisticated dashboard with interactive charts, real-time data updates, and customizable widgets. Uses React and Chart.js for data visualization.',
+      'A sophisticated analytics dashboard featuring interactive charts, real-time data updates, customizable widgets, and exportable reports. Uses Chart.js for data visualization and a REST API for real-time data fetching.',
     stack: ['React', 'Chart.js', 'REST API', 'CSS'],
     image: '',
     liveUrl: '',
@@ -56,47 +56,47 @@ export const PROJECTS_DETAILED = [
 export const CASE_STUDIES = [
   {
     id: 1,
-    title: 'Redesigning the TaskFlow Dashboard',
-    type: 'UX Case Study',
+    title: 'Improving UX: From Cluttered to Clean Dashboard',
+    type: 'UX/UI Case Study',
     excerpt:
-      'How I improved user engagement by 40% through thoughtful UX design and iterative testing.',
-    role: 'Lead Designer & Developer',
+      'How thoughtful UX design increased user engagement by 40% and reduced task creation time by half.',
+    role: 'Lead Designer & Frontend Developer',
     timeline: '3 months',
-    tools: 'Figma, React, User Testing',
+    tools: 'Figma, React, User Testing, CSS',
     challenge:
-      'The original TaskFlow dashboard was cluttered and difficult to navigate. Users complained about confusion, and task creation took too many steps.',
+      'The original dashboard was overwhelming with too many features on one screen. Users reported confusion, low task completion rates, and it took an average of 5 steps to create a single task. Retention rates were dropping month-over-month.',
     solution:
-      'I conducted user interviews, created wireframes, and implemented a streamlined interface with progressive disclosure. The new design featured a single-page workflow with smart filtering and quick actions.',
+      'I conducted user interviews with 20+ power users to understand their pain points. Created wireframes and prototypes, then built a streamlined interface using progressive disclosure. Implemented smart defaults, quick actions, and a cleaner visual hierarchy. The new design featured a single-page workflow with contextual actions.',
     results:
-      'After launch, user engagement increased by 40%, average task creation time dropped by 50%, and customer satisfaction scores improved significantly.',
-    link: '/case-studies/taskflow',
+      'After launch, user engagement increased by 40%, average task creation time dropped from 4 minutes to 2 minutes, customer satisfaction scores improved by 35%, and churn rate decreased by 15%.',
+    link: '/case-studies/dashboard',
   },
   {
     id: 2,
-    title: 'Building a Performant E-commerce Platform',
+    title: 'Building for Scale: High-Performance E-Commerce',
     type: 'Technical Case Study',
     excerpt:
-      'Achieving 98 Lighthouse score while handling 10,000+ products and real-time inventory.',
+      'Achieving 98 Lighthouse score while handling 10,000+ products and managing peak traffic surges.',
     role: 'Full Stack Developer',
     timeline: '6 months',
-    tools: 'React, Node.js, PostgreSQL, Webpack',
+    tools: 'React, Node.js, PostgreSQL, Webpack, CDN',
     challenge:
-      'The e-commerce platform needed to handle a large product catalog, real-time inventory updates, and provide a fast, smooth user experience across all devices.',
+      'The e-commerce platform needed to handle a large product catalog (10,000+ items), real-time inventory updates, and provide exceptional performance across all devices. During peak sales, the site was slow and had high bounce rates.',
     solution:
-      'Implemented code splitting, lazy loading, image optimization, and a CDN for static assets. Built an efficient API with caching strategies and database indexing.',
+      'Implemented code splitting and lazy loading for React components, image optimization with WebP format, database query optimization with proper indexing, and integrated a CDN for static assets. Built an efficient backend API with caching strategies and database connection pooling.',
     results:
-      'Achieved 98 Lighthouse score, page load time reduced to under 1 second, and successfully handled peak traffic during sales events.',
-    link: '/case-studies/ecommerce',
+      'Achieved 98 Lighthouse score, page load time reduced from 4.5s to under 1s, improved Core Web Vitals scores, successfully handled 10x traffic during Black Friday sales without performance degradation, and conversion rate increased by 22%.',
+    link: '/case-studies/ecommerce-performance',
   },
 ];
 
 export const BLOG_POSTS = [
   {
     id: 1,
-    title: 'Building Accessible React Components',
+    title: 'Building Accessible React Components: A Complete Guide',
     category: 'React',
     excerpt:
-      'A deep dive into WCAG guidelines and how to build React components that work for everyone.',
+      'A deep dive into WCAG guidelines and practical strategies to build React components that work for everyone, including users with disabilities.',
     image: '',
     date: 'December 15, 2024',
     readTime: 8,
@@ -104,10 +104,10 @@ export const BLOG_POSTS = [
   },
   {
     id: 2,
-    title: 'CSS Grid vs Flexbox: When to Use Each',
+    title: 'CSS Grid vs Flexbox: When to Use Each and Why',
     category: 'CSS',
     excerpt:
-      'Understanding the differences between CSS Grid and Flexbox to write better layouts faster.',
+      'Understanding the differences between CSS Grid and Flexbox to write better, more maintainable layouts and improve your CSS skills.',
     image: '',
     date: 'December 10, 2024',
     readTime: 6,
@@ -115,10 +115,10 @@ export const BLOG_POSTS = [
   },
   {
     id: 3,
-    title: 'Optimizing Web Performance: A Practical Guide',
+    title: 'Web Performance Optimization: A Practical Guide for 2024',
     category: 'Performance',
     excerpt:
-      'Practical strategies to improve your website performance and provide better user experiences.',
+      'Practical strategies to measure and improve your website performance, including Core Web Vitals optimization and best practices.',
     image: '',
     date: 'December 5, 2024',
     readTime: 10,

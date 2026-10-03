@@ -4,9 +4,9 @@ import { PROJECTS_DETAILED } from '../data/portfolio';
 function Home() {
   const featured = PROJECTS_DETAILED.slice(0, 3);
   const stats = [
-    { value: '4+', label: 'Years building' },
-    { value: '15+', label: 'Projects launched' },
-    { value: '100%', label: 'Focus on quality' },
+    { value: '4+', label: 'Years Experience' },
+    { value: '20+', label: 'Projects Built' },
+    { value: '100%', label: 'Client Satisfaction' },
   ];
 
   return (
@@ -21,16 +21,18 @@ function Home() {
               out.
             </h1>
             <p className="lead">
-              I'm Victor Odero, a developer focused on turning product ideas into
-              polished, responsive, and user-centered experiences.
+              I'm Victor Odero, a passionate frontend developer focused on turning
+              product ideas into polished, responsive, and user-centered experiences.
+              With over 4 years of experience, I've helped startups and businesses
+              create beautiful digital products that users love.
             </p>
 
             <div className="cta-row">
               <a className="btn btn-primary" href="/projects">
-                View Work
+                View My Work
               </a>
               <a className="btn btn-secondary" href="/contact">
-                Contact Me
+                Get In Touch
               </a>
             </div>
 
@@ -68,7 +70,7 @@ function Home() {
       <section className="section alt-section">
         <div className="container">
           <p className="section-tag">Featured Work</p>
-          <h2>Selected projects that showcase my approach.</h2>
+          <h2>Projects that showcase my approach to design and development.</h2>
 
           <div className="project-grid">
             {featured.map((project) => (
@@ -111,20 +113,21 @@ function Home() {
       <section className="section">
         <div className="container two-column">
           <div>
-            <p className="section-tag">About</p>
+            <p className="section-tag">About Me</p>
             <h2>Design-driven thinking with engineering discipline.</h2>
           </div>
 
           <div>
             <p>
-              I enjoy building interfaces that feel effortless: thoughtful layouts,
-              strong visual hierarchy, and smooth interactions that help users
-              understand the value of a product quickly.
+              I thrive at the intersection of design and development, creating interfaces
+              that are not only beautiful but also highly functional and performant. My
+              approach starts with understanding the user, their needs, and the business
+              goals, then translating that into elegant solutions.
             </p>
             <p>
-              My work sits at the intersection of design and implementation,
-              balancing aesthetics, performance, and usability to create
-              experiences people actually enjoy using.
+              I'm passionate about clean code, responsive design, and creating accessible
+              web experiences. When I'm not coding, you'll find me contributing to open
+              source or writing about web development.
             </p>
             <p>
               <a href="/resume">View my full resume →</a>

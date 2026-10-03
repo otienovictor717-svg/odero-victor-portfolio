@@ -4,49 +4,55 @@ A modern, clean portfolio website showcasing my work as a frontend developer and
 
 ## 🚀 Live Demo
 
-[View the portfolio](https://otienovictor717-svg.github.io/odero-victor-portfolio) (deployment instructions below)
+[View the live portfolio](https://otienovictor717-svg.github.io/odero-victor-portfolio)
 
-## 📋 Features
+## ✨ Features
 
-- ✨ **Modern & Responsive Design** — Works seamlessly on desktop, tablet, and mobile
+- 🎨 **Modern & Responsive Design** — Works seamlessly on desktop, tablet, and mobile
 - ⚡ **Lightning Fast** — Built with Vite for instant development and optimized production builds
-- 🎨 **Customizable Theme** — Easy-to-modify color scheme via CSS variables
-- 📱 **Mobile-First** — Optimized for all screen sizes
+- 🎯 **Multi-Page Architecture** — Home, Projects, Case Studies, Blog, Resume, and Contact pages
+- 📱 **Mobile-First** — Optimized for all screen sizes with touch-friendly navigation
 - ♿ **Accessible** — Semantic HTML and keyboard navigation support
-- 🔧 **Component-Based Architecture** — Modular React components for easy updates
-- 📊 **Organized Content** — Centralized data file (`src/data/portfolio.js`) for quick edits
+- 🧩 **Component-Based Architecture** — Modular React components for easy maintenance
+- 💾 **Organized Content** — Centralized data file for quick edits
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React 18, Vite, CSS3
-- **Styling:** Custom CSS with CSS Variables (no frameworks)
+- **Frontend:** React 18, React Router DOM, Vite, CSS3
+- **Styling:** Custom CSS with CSS Variables
 - **Build Tool:** Vite 5
-- **Linting:** ESLint (configured)
+- **Routing:** React Router v6
 - **Package Manager:** npm
 
 ## 📦 Project Structure
 
 ```
 src/
-├── components/          # React components for each section
-│   ├── Header.jsx      # Navigation header
-│   ├── Header.css      # Header styling
-│   ├── Hero.jsx        # Hero/welcome section
-│   ├── About.jsx       # About section
-│   ├── Skills.jsx      # Skills showcase
-│   ├── Projects.jsx    # Featured projects
-│   ├── Experience.jsx  # Work experience
-│   └── Contact.jsx     # Contact section
+├── components/           # Reusable React components
+│   ├── Header.jsx       # Navigation header with mobile menu
+│   ├── Footer.jsx       # Footer with links and social profiles
+│   ├── ContactForm.jsx  # Contact form with mailto integration
+│   ├── Header.css       # Header styling
+│   └── styles.css       # Component-specific styles
+├── pages/               # Page components
+│   ├── Home.jsx         # Landing page with hero and featured projects
+│   ├── Projects.jsx     # Full project portfolio
+│   ├── CaseStudies.jsx  # In-depth case study breakdowns
+│   ├── Blog.jsx         # Blog/articles page
+│   ├── Resume.jsx       # Resume/CV page with timeline
+│   └── Contact.jsx      # Contact page with form
 ├── data/
-│   └── portfolio.js    # Centralized content (edit this to update your portfolio)
-├── App.jsx             # Main app component
-├── main.jsx            # React entry point
-├── index.css           # Global styles & theme variables
-package.json           # Dependencies & scripts
-vite.config.js         # Vite configuration
+│   └── portfolio.js      # All content data (projects, blog, case studies)
+├── App.jsx              # Main app with React Router setup
+├── main.jsx             # React entry point
+└── index.css            # Global styles and theme variables
+
+package.json             # Dependencies and scripts
+vite.config.js           # Vite configuration
+README.md                # This file
 ```
 
-## 🚦 Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 - Node.js 16+ and npm
@@ -86,41 +92,24 @@ npm run preview
 
 ## ✏️ Customizing Your Portfolio
 
-All content is centralized in **`src/data/portfolio.js`**. Simply edit this file to update:
+### Update Your Information
 
-- **Navigation links** — `NAV_LINKS`
-- **Skills** — `SKILLS` array
-- **Projects** — `PROJECTS` array (add/remove projects)
-- **Experience** — `EXPERIENCE` array
-- **Stats** — `STATS` (displayed in hero section)
-- **Social links** — `SOCIALS` (GitHub, LinkedIn, Email, etc.)
+Edit `src/data/portfolio.js` to update:
 
-### Example: Add a New Project
+- **Projects** — Add your real projects with links
+- **Case Studies** — Add in-depth project breakdowns
+- **Blog Posts** — Add your articles and insights
 
-Edit `src/data/portfolio.js`:
+### Update Contact Information
 
-```javascript
-export const PROJECTS = [
-  {
-    title: 'Your Project Name',
-    type: 'Project Category',
-    description: 'Brief description of what the project does.',
-    stack: ['React', 'Node.js', 'CSS'],
-  },
-  // ... more projects
-];
-```
-
-### Example: Update Your Name & Title
-
-Edit `src/components/Hero.jsx`:
+Edit `src/pages/Contact.jsx` and `src/components/Footer.jsx`:
 
 ```javascript
-<h1>I build clean, memorable digital experiences that help ideas stand out.</h1>
-<p className="lead">
-  I'm [Your Name], a developer focused on turning product ideas into polished,
-  responsive, and user-centered experiences.
-</p>
+// Replace with your real email
+<a href="mailto:your.email@example.com">your.email@example.com</a>
+
+// Replace with your GitHub URL
+<a href="https://github.com/your-username">GitHub</a>
 ```
 
 ### Customize Colors
@@ -139,6 +128,83 @@ Edit `src/index.css` to change the theme:
 }
 ```
 
+### Update Personal Information
+
+Edit `src/pages/Home.jsx`, `src/components/Header.jsx`, and `src/components/Footer.jsx`:
+
+```javascript
+// Update your name and title
+<h1>I build clean, memorable digital experiences that help ideas stand out.</h1>
+<p className="lead">
+  I'm Victor Odero, a developer focused on turning product ideas into polished,
+  responsive, and user-centered experiences.
+</p>
+```
+
+## 📄 Adding Projects
+
+In `src/data/portfolio.js`, add your projects to the `PROJECTS_DETAILED` array:
+
+```javascript
+export const PROJECTS_DETAILED = [
+  {
+    id: 1,
+    title: 'Your Project Name',
+    type: 'Project Category',
+    description: 'Brief description of what the project does.',
+    fullDescription: 'Longer description with more details.',
+    stack: ['React', 'Node.js', 'CSS'],
+    image: 'https://your-image-url.com/project.jpg',
+    liveUrl: 'https://your-live-project.com',
+    githubUrl: 'https://github.com/your-username/project-name',
+  },
+  // ... more projects
+];
+```
+
+## 🎬 Adding Blog Posts
+
+In `src/data/portfolio.js`, add to the `BLOG_POSTS` array:
+
+```javascript
+export const BLOG_POSTS = [
+  {
+    id: 1,
+    title: 'Your Blog Post Title',
+    category: 'React',
+    excerpt: 'A brief excerpt of your blog post.',
+    image: 'https://your-image-url.com/blog-post.jpg',
+    date: 'December 15, 2024',
+    readTime: 8,
+    url: '/blog/your-post-slug',
+  },
+  // ... more posts
+];
+```
+
+## 📋 Adding Case Studies
+
+In `src/data/portfolio.js`, add to the `CASE_STUDIES` array:
+
+```javascript
+export const CASE_STUDIES = [
+  {
+    id: 1,
+    title: 'Your Case Study Title',
+    type: 'UX Case Study',
+    excerpt: 'Brief overview of the case study.',
+    role: 'Your Role',
+    timeline: '3 months',
+    tools: 'Tools you used',
+    challenge: 'The problem you solved.',
+    solution: 'How you solved it.',
+    results: 'The impact and results.',
+    link: '/case-studies/your-study',
+  },
+  // ... more case studies
+];
+```
+
 ## 🚀 Deployment
 
 ### Deploy to GitHub Pages
@@ -148,7 +214,7 @@ Edit `src/index.css` to change the theme:
    "homepage": "https://otienovictor717-svg.github.io/odero-victor-portfolio",
    ```
 
-2. Install the gh-pages package:
+2. Install gh-pages:
    ```bash
    npm install --save-dev gh-pages
    ```
@@ -187,73 +253,77 @@ Your portfolio will be live at `https://otienovictor717-svg.github.io/odero-vict
 4. Set build command to `npm run build` and publish directory to `dist`
 5. Deploy!
 
-## 📝 Code Quality
+## 📧 Contact Form Setup
 
-Lint your code:
+The contact form currently uses mailto links. To use a backend service:
+
+**Option 1: Formspree (No Backend Required)**
+```javascript
+// In src/components/ContactForm.jsx
+const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(formData),
+});
+```
+
+**Option 2: Your Own Backend API**
+```javascript
+const response = await fetch('https://your-backend.com/api/contact', {
+  method: 'POST',
+  body: JSON.stringify(formData),
+});
+```
+
+## 🎨 Styling
+
+- Global styles: `src/index.css`
+- Component styles: `src/components/styles.css`
+- Header styles: `src/components/Header.css`
+
+All styling uses CSS variables for easy theme customization.
+
+## 📱 Responsive Design
+
+The portfolio is fully responsive with breakpoints at:
+- Desktop: 1120px max-width container
+- Tablet: 768px and below
+- Mobile: 640px and below
+
+Mobile menu automatically appears below 768px.
+
+## ♿ Accessibility
+
+- Semantic HTML structure
+- ARIA labels for navigation
+- Keyboard navigation support
+- Focus-visible states on interactive elements
+- Proper heading hierarchy
+- Color contrast meets WCAG standards
+
+## 🔧 Available Scripts
 
 ```bash
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Lint code
 npm run lint
 ```
 
-Fix ESLint warnings:
+## 📊 Performance
 
-```bash
-npm run lint -- --fix
-```
-
-## 🎨 Features & Components
-
-### Header
-- Sticky navigation bar with smooth scroll to sections
-- Responsive design with mobile support
-- CTA button to contact section
-
-### Hero Section
-- Eye-catching headline and introduction
-- Profile card with availability badge
-- Quick stats (years of experience, projects launched, etc.)
-- Social media links
-
-### About Section
-- Design philosophy and approach
-- Value proposition
-
-### Skills Section
-- Grid of skill cards
-- Easy to add/remove skills
-
-### Projects Section
-- Project cards with title, description, and tech stack
-- Filterable by type
-- Easy to link to live demos or GitHub repos
-
-### Experience Section
-- Timeline-style work experience
-- Role, company, and key achievements
-- Sortable by date
-
-### Contact Section
-- Clear call-to-action
-- Email link (easily customizable)
-
-## 🔧 Configuration
-
-### Vite Configuration
-
-Edit `vite.config.js` to customize build behavior:
-
-```javascript
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-export default defineConfig({
-  plugins: [react()],
-  build: {
-    minify: 'terser',
-    sourcemap: false,
-  }
-})
-```
+- Lazy-loaded components with React Router
+- Optimized CSS with variables
+- Lightweight dependencies (React, React Router only)
+- Fast build times with Vite
+- Optimized for Lighthouse scores
 
 ## 🐛 Troubleshooting
 
@@ -269,10 +339,10 @@ npm install
 npm run build
 ```
 
-### Styling issues after deployment
-Ensure your `vite.config.js` has the correct base URL for GitHub Pages.
+### Contact form not working
+Check that your email in `src/components/ContactForm.jsx` is correct and the mailto protocol is supported in your browser.
 
-## 📄 License
+## 📝 License
 
 This project is open source and available under the MIT License. Feel free to use this as a template for your own portfolio!
 
@@ -280,9 +350,11 @@ This project is open source and available under the MIT License. Feel free to us
 
 Have ideas to improve this portfolio? Feel free to fork, modify, and submit pull requests.
 
-## 📧 Questions?
+## 📞 Questions?
 
-Reach out on [LinkedIn](https://linkedin.com) or email victor@example.com
+Reach out via:
+- Email: otienovictor717@gmail.com
+- GitHub: https://github.com/otienovictor717-svg
 
 ---
 

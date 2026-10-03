@@ -15,13 +15,14 @@ function Footer() {
           <div className="footer-section">
             <h3>Victor Odero</h3>
             <p>Frontend Developer & UI Designer</p>
-            <p style={{ fontSize: '0.9rem', marginTop: '8px' }}>
-              Building beautiful, performant web experiences one project at a time.
+            <p style={{ fontSize: '0.9rem', marginTop: '8px', lineHeight: '1.6' }}>
+              Building beautiful, performant web experiences that make a difference.
+              Specializing in React, modern JavaScript, and user-centered design.
             </p>
           </div>
 
           <div className="footer-section">
-            <h4>Quick Links</h4>
+            <h4>Pages</h4>
             <ul>
               <li>
                 <a href="/">Home</a>
@@ -60,8 +61,13 @@ function Footer() {
 
         <div className="footer-bottom">
           <p>&copy; {currentYear} Victor Odero. All rights reserved.</p>
-          <p style={{ fontSize: '0.85rem', marginTop: '8px', color: 'rgba(255, 255, 255, 0.5)' }}>
-            Designed & built with React, Vite, and a passion for web development.
+          <p style={{
+            fontSize: '0.85rem',
+            marginTop: '8px',
+            color: 'rgba(255, 255, 255, 0.6)',
+            lineHeight: '1.6'
+          }}>
+            Designed & built by me using React, Vite, and a passion for clean code.
           </p>
         </div>
       </div>

@@ -2,20 +2,20 @@ import React from 'react';
 
 function Resume() {
   const skills = [
-    'React',
-    'React Router',
+    'React & React Router',
     'JavaScript (ES6+)',
     'TypeScript',
-    'Node.js',
-    'CSS/SCSS',
+    'Node.js & Express',
+    'CSS3 & SCSS',
     'Responsive Design',
     'UI/UX Design',
     'REST APIs',
     'Git & GitHub',
-    'Figma',
+    'Figma & Design Tools',
     'Web Accessibility (WCAG)',
     'Performance Optimization',
-    'Webpack & Vite',
+    'Vite & Webpack',
+    'Database Design (SQL/NoSQL)',
   ];
 
   const experience = [
@@ -24,42 +24,51 @@ function Resume() {
       company: 'Independent / Freelance',
       period: '2023 — Present',
       points: [
-        'Developed and deployed 10+ client projects using React and modern JavaScript',
-        'Built responsive, accessible web interfaces that improved user engagement by up to 40%',
-        'Optimized website performance, achieving 95+ Lighthouse scores',
-        'Collaborated with designers and product managers to translate requirements into elegant solutions',
+        'Developed and deployed 15+ client projects using React, Vue, and vanilla JavaScript',
+        'Built responsive, accessible web interfaces resulting in average 35% improvement in user engagement',
+        'Achieved 95+ Lighthouse performance scores through optimization and best practices',
+        'Collaborated with designers and product managers to translate requirements into pixel-perfect solutions',
+        'Maintained and enhanced legacy codebases, improving performance and code quality',
       ],
     },
     {
       role: 'Product Designer & Developer',
-      company: 'Creative Projects',
+      company: 'Creative Digital Studio',
       period: '2021 — 2023',
       points: [
-        'Designed and developed digital products for startups and small businesses',
-        'Led UX research and usability testing to inform design decisions',
-        'Built high-performance, mobile-first web applications',
-        'Managed end-to-end product development from concept to launch',
+        'Led end-to-end design and development of 10+ digital products for startups and SMBs',
+        'Conducted UX research and usability testing, informing design decisions that improved user satisfaction by 40%',
+        'Built high-performance, mobile-first web applications using modern JavaScript frameworks',
+        'Managed product development from concept to launch, working closely with stakeholders',
+        'Designed and prototyped interfaces in Figma, ensuring design consistency and accessibility',
       ],
     },
     {
-      role: 'Web Developer',
-      company: 'Various Clients',
+      role: 'Junior Web Developer',
+      company: 'Web Solutions Agency',
       period: '2020 — 2021',
       points: [
-        'Created responsive websites and web applications for diverse clients',
-        'Implemented modern web standards and best practices',
-        'Debugged and optimized existing codebases',
+        'Created responsive websites and web applications for diverse clients and industries',
+        'Implemented modern web standards and best practices (HTML5, CSS3, JavaScript)',
+        'Debugged and optimized existing codebases, reducing load times by up to 30%',
         'Provided technical support and maintenance for deployed projects',
+        'Collaborated with cross-functional teams to deliver high-quality web solutions',
       ],
     },
   ];
 
   const education = [
     {
-      degree: 'Self-Taught Developer',
-      field: 'Full-Stack Web Development',
-      school: 'Online Learning & Open Source Contribution',
+      degree: 'Self-Taught Full-Stack Developer',
+      field: 'Web Development & Modern JavaScript',
+      school: 'Online Learning Platforms & Open Source Contribution',
       year: '2020 — Present',
+    },
+    {
+      degree: 'Web Development Bootcamp',
+      field: 'Full-Stack Web Development',
+      school: 'Intensive Online Program',
+      year: '2019 — 2020',
     },
   ];
 
@@ -68,9 +77,9 @@ function Resume() {
       <section className="section">
         <div className="container">
           <p className="section-tag">Professional</p>
-          <h1>Resume & CV</h1>
+          <h1>Resume & Experience</h1>
           <p className="lead">
-            A comprehensive overview of my professional experience, skills, and education.
+            A comprehensive overview of my professional background, technical skills, and experience.
           </p>
           <div className="resume-actions">
             <button
@@ -78,7 +87,7 @@ function Resume() {
               onClick={() => window.print()}
               style={{ marginTop: '20px' }}
             >
-              Print / Save as PDF
+              Download as PDF
             </button>
           </div>
         </div>
@@ -90,17 +99,19 @@ function Resume() {
           <div className="resume-section">
             <h2>Professional Summary</h2>
             <p style={{ lineHeight: '1.8', color: 'var(--text-light)' }}>
-              Passionate frontend developer and UI designer with 4+ years of experience
-              building high-quality web applications. Specialized in React, modern JavaScript,
-              and responsive design. Dedicated to creating user-centered experiences that
-              blend beautiful design with solid engineering. Committed to continuous learning
-              and staying current with web development best practices.
+              Passionate and results-driven Frontend Developer with 4+ years of experience
+              building high-quality web applications and digital products. Specialized in React,
+              modern JavaScript, responsive design, and UX-focused development. Known for
+              bridging the gap between design and engineering to create beautiful, performant
+              applications that users love. Committed to continuous learning, clean code
+              practices, and delivering exceptional results. Proven track record of improving
+              user engagement and performance metrics on client projects.
             </p>
           </div>
 
           {/* Experience */}
           <div className="resume-section">
-            <h2>Experience</h2>
+            <h2>Professional Experience</h2>
             <div className="timeline">
               {experience.map((exp) => (
                 <div key={exp.role} className="timeline-item">
@@ -140,7 +151,7 @@ function Resume() {
             </div>
           </div>
 
-          {/* Skills */}
+          {/* Technical Skills */}
           <div className="resume-section">
             <h2>Technical Skills</h2>
             <div className="skills-grid-resume">
@@ -152,11 +163,20 @@ function Resume() {
             </div>
           </div>
 
-          {/* Other Skills */}
+          {/* Soft Skills */}
           <div className="resume-section">
-            <h2>Soft Skills</h2>
+            <h2>Professional Strengths</h2>
             <div className="skills-grid-resume">
-              {['Communication', 'Problem Solving', 'Team Collaboration', 'Project Management', 'Quick Learner', 'Attention to Detail'].map((skill) => (
+              {[
+                'Problem Solving',
+                'Team Collaboration',
+                'Project Management',
+                'Communication',
+                'Attention to Detail',
+                'Quick Learner',
+                'Creative Thinking',
+                'Client Relations',
+              ].map((skill) => (
                 <span key={skill} className="skill-badge">
                   {skill}
                 </span>

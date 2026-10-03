@@ -4,9 +4,9 @@ import { PROJECTS_DETAILED } from '../data/portfolio';
 function Home() {
   const featured = PROJECTS_DETAILED.slice(0, 3);
   const stats = [
-    { value: '4+', label: 'Years Experience' },
-    { value: '20+', label: 'Projects Built' },
-    { value: '100%', label: 'Client Satisfaction' },
+    { value: '4+', label: 'Years Building' },
+    { value: '20+', label: 'Projects Shipped' },
+    { value: '100%', label: 'Client Happiness' },
   ];
 
   return (
@@ -17,22 +17,22 @@ function Home() {
           <div className="hero-copy">
             <p className="eyebrow">Frontend Developer • UI Designer</p>
             <h1>
-              I build clean, memorable digital experiences that help ideas stand
-              out.
+              I craft digital experiences that users actually love.
             </h1>
             <p className="lead">
-              I'm Victor Odero, a passionate frontend developer focused on turning
-              product ideas into polished, responsive, and user-centered experiences.
-              With over 4 years of experience, I've helped startups and businesses
-              create beautiful digital products that users love.
+              I'm Victor Odero, a frontend developer obsessed with creating beautiful,
+              performant web applications. With over 4 years of experience, I've helped
+              startups and growing companies transform their ideas into polished digital
+              products that drive real business results. I believe great design meets great
+              engineering.
             </p>
 
             <div className="cta-row">
               <a className="btn btn-primary" href="/projects">
-                View My Work
+                See My Work
               </a>
               <a className="btn btn-secondary" href="/contact">
-                Get In Touch
+                Start a Project
               </a>
             </div>
 
@@ -40,17 +40,17 @@ function Home() {
               <a href="https://github.com/otienovictor717-svg" target="_blank" rel="noreferrer">
                 GitHub
               </a>
-              <a href="mailto:otienovictor717@gmail.com">Email</a>
+              <a href="mailto:otienovictor717@gmail.com">Email Me</a>
             </div>
           </div>
 
           <div className="hero-card">
-            <div className="badge">Available for work</div>
+            <div className="badge">Available for Projects</div>
             <div className="profile-panel">
               <div className="avatar">VO</div>
               <div>
                 <h3>Victor Odero</h3>
-                <p>Product-focused frontend engineer</p>
+                <p>Product-focused Frontend Engineer</p>
               </div>
             </div>
 
@@ -70,7 +70,7 @@ function Home() {
       <section className="section alt-section">
         <div className="container">
           <p className="section-tag">Featured Work</p>
-          <h2>Projects that showcase my approach to design and development.</h2>
+          <h2>Projects that shaped how I approach product development.</h2>
 
           <div className="project-grid">
             {featured.map((project) => (
@@ -93,7 +93,7 @@ function Home() {
                   )}
                   {project.githubUrl && (
                     <a href={project.githubUrl} target="_blank" rel="noreferrer">
-                      GitHub →
+                      See Code →
                     </a>
                   )}
                 </div>
@@ -103,7 +103,7 @@ function Home() {
 
           <div style={{ textAlign: 'center', marginTop: '50px' }}>
             <a href="/projects" className="btn btn-primary">
-              View All Projects
+              View All Projects →
             </a>
           </div>
         </div>
@@ -113,24 +113,25 @@ function Home() {
       <section className="section">
         <div className="container two-column">
           <div>
-            <p className="section-tag">About Me</p>
-            <h2>Design-driven thinking with engineering discipline.</h2>
+            <p className="section-tag">About</p>
+            <h2>Design thinking meets solid engineering.</h2>
           </div>
 
           <div>
             <p>
-              I thrive at the intersection of design and development, creating interfaces
-              that are not only beautiful but also highly functional and performant. My
-              approach starts with understanding the user, their needs, and the business
-              goals, then translating that into elegant solutions.
+              I believe the best products come from combining thoughtful design with
+              strong technical execution. My approach starts with understanding the user,
+              their pain points, and the business objectives. Then I translate that into
+              interfaces that are not only beautiful but highly functional and performant.
             </p>
             <p>
-              I'm passionate about clean code, responsive design, and creating accessible
-              web experiences. When I'm not coding, you'll find me contributing to open
-              source or writing about web development.
+              I'm passionate about clean code, responsive design, accessibility, and
+              creating experiences that make people's lives easier. I stay current with
+              web technologies and best practices because I believe continuous learning
+              is essential in this field.
             </p>
             <p>
-              <a href="/resume">View my full resume →</a>
+              <a href="/resume" style={{ fontWeight: '600' }}>Check my full resume →</a>
             </p>
           </div>
         </div>

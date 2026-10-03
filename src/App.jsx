@@ -1,5 +1,13 @@
 import './components/Header.css';
 
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import Contact from './components/Contact';
+
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
@@ -84,177 +92,15 @@ const socials = [
 function App() {
   return (
     <div className="app-shell">
-      <header className="header">
-        <div className="header-container">
-          <div className="logo">
-            <a href="#home">Victor.</a>
-          </div>
-
-          <nav className="nav" aria-label="Main navigation">
-            {navLinks.map((link) => (
-              <a key={link.href} href={link.href}>
-                {link.label}
-              </a>
-            ))}
-          </nav>
-
-          <a className="header-cta" href="#contact">
-            Let&apos;s Talk
-          </a>
-        </div>
-      </header>
+      <Header navLinks={navLinks} />
 
       <main>
-        <section id="home" className="hero section">
-          <div className="container hero-grid">
-            <div className="hero-copy">
-              <p className="eyebrow">Frontend Developer • UI Designer</p>
-              <h1>
-                I build clean, memorable digital experiences that help ideas stand out.
-              </h1>
-              <p className="lead">
-                I&apos;m Victor Odero, a developer focused on turning product ideas into polished,
-                responsive, and user-centered experiences.
-              </p>
-
-              <div className="cta-row">
-                <a className="btn btn-primary" href="#projects">
-                  View Work
-                </a>
-                <a className="btn btn-secondary" href="#contact">
-                  Contact Me
-                </a>
-              </div>
-
-              <div className="social-row" aria-label="Social profiles">
-                {socials.map((social) => (
-                  <a key={social.label} href={social.href} target="_blank" rel="noreferrer">
-                    {social.label}
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            <div className="hero-card">
-              <div className="badge">Available for work</div>
-              <div className="profile-panel">
-                <div className="avatar">VO</div>
-                <div>
-                  <h3>Victor Odero</h3>
-                  <p>Product-focused frontend engineer</p>
-                </div>
-              </div>
-
-              <div className="mini-stats">
-                {stats.map((stat) => (
-                  <div key={stat.label} className="mini-stat">
-                    <strong>{stat.value}</strong>
-                    <span>{stat.label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="about" className="section alt-section">
-          <div className="container two-column">
-            <div>
-              <p className="section-tag">About</p>
-              <h2>Design-driven thinking with engineering discipline.</h2>
-            </div>
-
-            <div>
-              <p>
-                I enjoy building interfaces that feel effortless: thoughtful layouts, strong visual
-                hierarchy, and smooth interactions that help users understand the value of a product
-                quickly.
-              </p>
-              <p>
-                My work sits at the intersection of design and implementation, balancing aesthetics,
-                performance, and usability to create experiences people actually enjoy using.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="skills" className="section">
-          <div className="container">
-            <p className="section-tag">Skills</p>
-            <h2>Tools and strengths I bring to product work.</h2>
-
-            <div className="skill-grid">
-              {skills.map((skill) => (
-                <div key={skill} className="skill-card">
-                  {skill}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="projects" className="section alt-section">
-          <div className="container">
-            <p className="section-tag">Projects</p>
-            <h2>Selected work that reflects my approach.</h2>
-
-            <div className="project-grid">
-              {projects.map((project) => (
-                <article key={project.title} className="project-card">
-                  <span className="project-type">{project.type}</span>
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-
-                  <div className="stack-row">
-                    {project.stack.map((item) => (
-                      <span key={item}>{item}</span>
-                    ))}
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="experience" className="section">
-          <div className="container">
-            <p className="section-tag">Experience</p>
-            <h2>Experience shaping digital products.</h2>
-
-            <div className="experience-list">
-              {experience.map((item) => (
-                <article key={item.role} className="experience-item">
-                  <div className="experience-head">
-                    <div>
-                      <h3>{item.role}</h3>
-                      <p>{item.company}</p>
-                    </div>
-                    <span>{item.period}</span>
-                  </div>
-
-                  <ul>
-                    {item.points.map((point) => (
-                      <li key={point}>{point}</li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" className="section contact-section">
-          <div className="container contact-box">
-            <div>
-              <p className="section-tag">Contact</p>
-              <h2>Let&apos;s build something memorable.</h2>
-            </div>
-
-            <a className="btn btn-primary" href="mailto:victor@example.com">
-              victordeveloper@example.com
-            </a>
-          </div>
-        </section>
+        <Hero stats={stats} socials={socials} />
+        <About />
+        <Skills skills={skills} />
+        <Projects projects={projects} />
+        <Experience experience={experience} />
+        <Contact />
       </main>
     </div>
   );

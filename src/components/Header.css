@@ -3,8 +3,8 @@
   top: 0;
   z-index: 100;
   backdrop-filter: blur(16px);
-  background: rgba(7, 17, 31, 0.78);
-  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
 }
 
 .header-container {
@@ -51,14 +51,50 @@
   border: 1px solid rgba(124, 156, 255, 0.25);
   color: var(--text-strong);
   font-weight: 700;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .header-cta:hover {
   background: rgba(124, 156, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    gap: 16px;
+  }
+
+  .nav a {
+    font-size: 0.9rem;
+  }
+
+  .logo a {
+    font-size: 1.25rem;
+  }
 }
 
 @media (max-width: 640px) {
   .header-container {
     height: 70px;
+    gap: 12px;
+  }
+
+  .nav {
+    gap: 12px;
+  }
+
+  .nav a {
+    font-size: 0.8rem;
+  }
+
+  .logo a {
+    font-size: 1.1rem;
+  }
+
+  .header-cta {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
   }
 }

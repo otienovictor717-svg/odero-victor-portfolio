@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './components/Header.css';
 
 import Header from './components/Header';
@@ -18,17 +19,31 @@ import {
 } from './data/portfolio';
 
 function App() {
+  const [activeSection, setActiveSection] = useState('home');
+
   return (
     <div className="app-shell">
-      <Header navLinks={NAV_LINKS} />
+      <Header navLinks={NAV_LINKS} activeSection={activeSection} />
 
       <main>
-        <Hero stats={STATS} socials={SOCIALS} />
-        <About />
-        <Skills skills={SKILLS} />
-        <Projects projects={PROJECTS} />
-        <Experience experience={EXPERIENCE} />
-        <Contact />
+        <div id="home" onMouseEnter={() => setActiveSection('home')}>
+          <Hero stats={STATS} socials={SOCIALS} />
+        </div>
+        <div id="about" onMouseEnter={() => setActiveSection('about')}>
+          <About />
+        </div>
+        <div id="skills" onMouseEnter={() => setActiveSection('skills')}>
+          <Skills skills={SKILLS} />
+        </div>
+        <div id="projects" onMouseEnter={() => setActiveSection('projects')}>
+          <Projects projects={PROJECTS} />
+        </div>
+        <div id="experience" onMouseEnter={() => setActiveSection('experience')}>
+          <Experience experience={EXPERIENCE} />
+        </div>
+        <div id="contact" onMouseEnter={() => setActiveSection('contact')}>
+          <Contact />
+        </div>
       </main>
     </div>
   );

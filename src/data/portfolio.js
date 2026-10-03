@@ -8,9 +8,9 @@ export const PROJECTS_DETAILED = [
     fullDescription:
       'A complete redesign of my personal portfolio to better showcase my work and attract new clients. The new version features a modern design, improved performance, and better mobile responsiveness.',
     stack: ['React', 'CSS', 'Vite'],
-    image: 'https://via.placeholder.com/400x300?text=Portfolio+Revamp',
-    liveUrl: 'https://example.com/portfolio',
-    githubUrl: 'https://github.com/otienovictor717-svg/odero-victor-portfolio',
+    image: '',
+    liveUrl: '',
+    githubUrl: '',
   },
   {
     id: 2,
@@ -21,9 +21,9 @@ export const PROJECTS_DETAILED = [
     fullDescription:
       'A comprehensive task management platform built with React and Node.js. Features real-time updates, team collaboration tools, and advanced filtering capabilities.',
     stack: ['React', 'Node.js', 'MongoDB', 'API'],
-    image: 'https://via.placeholder.com/400x300?text=TaskFlow+Dashboard',
-    liveUrl: 'https://example.com/taskflow',
-    githubUrl: 'https://github.com/otienovictor717-svg/taskflow',
+    image: '',
+    liveUrl: '',
+    githubUrl: '',
   },
   {
     id: 3,
@@ -34,9 +34,9 @@ export const PROJECTS_DETAILED = [
     fullDescription:
       'A full-featured e-commerce platform with product browsing, shopping cart, checkout, and payment integration. Built with modern best practices for performance and accessibility.',
     stack: ['JavaScript', 'CSS', 'UX Design', 'Stripe API'],
-    image: 'https://via.placeholder.com/400x300?text=E-commerce+Storefront',
-    liveUrl: 'https://example.com/storefront',
-    githubUrl: 'https://github.com/otienovictor717-svg/ecommerce',
+    image: '',
+    liveUrl: '',
+    githubUrl: '',
   },
   {
     id: 4,
@@ -47,9 +47,9 @@ export const PROJECTS_DETAILED = [
     fullDescription:
       'A sophisticated dashboard with interactive charts, real-time data updates, and customizable widgets. Uses React and Chart.js for data visualization.',
     stack: ['React', 'Chart.js', 'REST API', 'CSS'],
-    image: 'https://via.placeholder.com/400x300?text=Analytics+Dashboard',
-    liveUrl: 'https://example.com/analytics',
-    githubUrl: 'https://github.com/otienovictor717-svg/analytics-dashboard',
+    image: '',
+    liveUrl: '',
+    githubUrl: '',
   },
 ];
 
@@ -97,7 +97,7 @@ export const BLOG_POSTS = [
     category: 'React',
     excerpt:
       'A deep dive into WCAG guidelines and how to build React components that work for everyone.',
-    image: 'https://via.placeholder.com/300x200?text=Accessible+React',
+    image: '',
     date: 'December 15, 2024',
     readTime: 8,
     url: '/blog/accessible-react',
@@ -108,7 +108,7 @@ export const BLOG_POSTS = [
     category: 'CSS',
     excerpt:
       'Understanding the differences between CSS Grid and Flexbox to write better layouts faster.',
-    image: 'https://via.placeholder.com/300x200?text=CSS+Grid+vs+Flexbox',
+    image: '',
     date: 'December 10, 2024',
     readTime: 6,
     url: '/blog/grid-vs-flexbox',
@@ -119,7 +119,7 @@ export const BLOG_POSTS = [
     category: 'Performance',
     excerpt:
       'Practical strategies to improve your website performance and provide better user experiences.',
-    image: 'https://via.placeholder.com/300x200?text=Web+Performance',
+    image: '',
     date: 'December 5, 2024',
     readTime: 10,
     url: '/blog/web-performance',

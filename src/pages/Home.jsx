@@ -38,10 +38,7 @@ function Home() {
               <a href="https://github.com/otienovictor717-svg" target="_blank" rel="noreferrer">
                 GitHub
               </a>
-              <a href="https://linkedin.com/in/victorodero" target="_blank" rel="noreferrer">
-                LinkedIn
-              </a>
-              <a href="mailto:victor@example.com">Email</a>
+              <a href="mailto:otienovictor717@gmail.com">Email</a>
             </div>
           </div>
 

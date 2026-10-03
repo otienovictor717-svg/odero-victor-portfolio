@@ -5,8 +5,7 @@ function Footer() {
 
   const socials = [
     { label: 'GitHub', href: 'https://github.com/otienovictor717-svg' },
-    { label: 'LinkedIn', href: 'https://linkedin.com/in/victorodero' },
-    { label: 'Twitter', href: 'https://twitter.com/victorodero' },
+    { label: 'Email', href: 'mailto:otienovictor717@gmail.com' },
   ];
 
   return (

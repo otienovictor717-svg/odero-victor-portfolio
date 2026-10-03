@@ -20,42 +20,30 @@ function ContactForm() {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
     setError('');
 
-    try {
-      // Replace with your actual backend endpoint or email service
-      // Example using FormSubmit (no backend needed):
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+    const { name, email, subject, message } = formData;
+    const mailtoBody = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\n${message}`
+    );
+    const mailtoLink = `mailto:otienovictor717@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${mailtoBody}`;
 
-      if (response.ok) {
-        setSubmitted(true);
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        setTimeout(() => setSubmitted(false), 5000);
-      } else {
-        setError('Failed to send message. Please try again.');
-      }
-    } catch (err) {
-      setError('An error occurred. Please try again later.');
-      console.error('Form submission error:', err);
-    } finally {
-      setLoading(false);
-    }
+    window.location.href = mailtoLink;
+    setSubmitted(true);
+    setFormData({ name: '', email: '', subject: '', message: '' });
+    setLoading(false);
   };
 
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
       {submitted && (
         <div className="form-success">
-          ✓ Thanks for reaching out! I'll get back to you soon.
+          ✓ Thanks for reaching out! Your mail app is ready to send the message.
         </div>
       )}
 
@@ -114,7 +102,7 @@ function ContactForm() {
       </div>
 
       <button type="submit" className="btn btn-primary" disabled={loading}>
-        {loading ? 'Sending...' : 'Send Message'}
+        {loading ? 'Preparing...' : 'Send Message'}
       </button>
     </form>
   );

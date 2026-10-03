@@ -7,10 +7,10 @@ function Contact() {
       <section className="section">
         <div className="container">
           <p className="section-tag">Get In Touch</p>
-          <h1>Let's Work Together</h1>
+          <h1>Let&apos;s Work Together</h1>
           <p className="lead">
-            Have a project in mind? Want to collaborate? I'd love to hear from you.
-            Fill out the form below and I'll get back to you as soon as possible.
+            Have a project in mind? Want to collaborate? I&apos;d love to hear from you.
+            Fill out the form below and I&apos;ll get back to you as soon as possible.
           </p>
         </div>
       </section>
@@ -22,15 +22,11 @@ function Contact() {
               <h2>Contact Information</h2>
               <div className="info-item">
                 <h4>Email</h4>
-                <a href="mailto:victor@example.com">victor@example.com</a>
-              </div>
-              <div className="info-item">
-                <h4>Phone</h4>
-                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                <a href="mailto:otienovictor717@gmail.com">otienovictor717@gmail.com</a>
               </div>
               <div className="info-item">
                 <h4>Location</h4>
-                <p>Remote • Available Worldwide</p>
+                <p>Remote • Worldwide</p>
               </div>
               <div className="info-item">
                 <h4>Social</h4>
@@ -38,12 +34,7 @@ function Contact() {
                   <a href="https://github.com/otienovictor717-svg" target="_blank" rel="noreferrer">
                     GitHub
                   </a>
-                  <a href="https://linkedin.com/in/victorodero" target="_blank" rel="noreferrer">
-                    LinkedIn
-                  </a>
-                  <a href="https://twitter.com/victorodero" target="_blank" rel="noreferrer">
-                    Twitter
-                  </a>
+                  <a href="mailto:otienovictor717@gmail.com">Email</a>
                 </div>
               </div>
             </div>

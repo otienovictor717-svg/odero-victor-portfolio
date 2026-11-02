@@ -6,7 +6,7 @@ export const PROJECTS_DETAILED = [
     description:
       'A fully responsive, multi-page portfolio website built with React 18 and Vite. Features smooth navigation, optimized performance, and a professional contact system.',
     fullDescription:
-      'A complete personal portfolio redesign showcasing my work as a frontend developer and UI designer. Built with React 18, React Router for multi-page routing, and modern CSS with custom variables. Includes a landing page with featured work, dedicated projects gallery, in-depth case studies, blog section, professional resume, and fully functional contact page with mailto integration. Optimized for performance with a 98 Lighthouse score.',
+      'A complete personal portfolio redesign showcasing my work as a frontend developer and UI designer. Built with React 18, React Router for multi-page routing, and modern CSS with custom variables and polished layout systems.',
     stack: ['React 18', 'React Router', 'CSS3', 'Vite', 'JavaScript'],
     image: '',
     liveUrl: 'https://otienovictor717-svg.github.io/odero-victor-portfolio',
@@ -14,38 +14,51 @@ export const PROJECTS_DETAILED = [
   },
   {
     id: 2,
+    title: 'Glow & Grace Beauty Store Mobile App',
+    type: 'Mobile-first Commerce UI',
+    description:
+      'A premium beauty shopping app with a luxury rose-gold aesthetic, product browsing, item detail pages, cart management, and a checkout flow for skincare and makeup products.',
+    fullDescription:
+      'A polished mobile-first storefront designed for a beauty and skincare brand. The app includes a hero section, featured product cards, category chips, a detailed product page with quantity controls, a cart summary, and a checkout form that simulates order placement. Built to feel premium, modern, and conversion-focused.',
+    stack: ['React 18', 'React Router', 'Vite', 'JavaScript', 'CSS3'],
+    image: '',
+    liveUrl: 'https://otienovictor717-svg.github.io/odero-victor-portfolio',
+    githubUrl: 'https://github.com/otienovictor717-svg/odero-victor-portfolio',
+  },
+  {
+    id: 3,
     title: 'TaskFlow - Productivity Dashboard',
     type: 'Web Application',
     description:
       'An intuitive task management platform designed to help teams organize work and improve productivity. Features real-time updates, team collaboration, and intelligent task filtering.',
     fullDescription:
-      'A comprehensive web application for task and project management. Built with React for the frontend and Node.js/MongoDB for the backend. Includes features like real-time task updates, team member collaboration, advanced filtering and search, progress tracking, project organization, and priority management. Designed with UX best practices to make project management intuitive and enjoyable.',
+      'A comprehensive web application for task and project management. Built with React for the frontend and Node.js/MongoDB for the backend. Includes features like real-time task updates, team management tools, and workflow tracking.',
     stack: ['React', 'Node.js', 'MongoDB', 'Express', 'Socket.io'],
     image: '',
     liveUrl: '',
     githubUrl: '',
   },
   {
-    id: 3,
+    id: 4,
     title: 'EasyShop - E-commerce Platform',
     type: 'Full-Stack Project',
     description:
       'A modern, user-friendly online shopping platform with seamless checkout experience, secure payments, and beautiful product discovery.',
     fullDescription:
-      'A full-featured e-commerce platform built with React on the frontend and Node.js/Express on the backend. Features include product browsing with advanced filtering, detailed product pages with images and reviews, shopping cart management, secure checkout process, payment integration with Stripe, order tracking, and user account management. Built with performance and accessibility in mind to ensure a smooth shopping experience.',
+      'A full-featured e-commerce platform built with React on the frontend and Node.js/Express on the backend. Features include product browsing with advanced filtering, detailed product pages with reviews, cart logic, and secure checkout.',
     stack: ['React', 'Node.js', 'PostgreSQL', 'Stripe API', 'CSS3'],
     image: '',
     liveUrl: '',
     githubUrl: '',
   },
   {
-    id: 4,
+    id: 5,
     title: 'DataViz - Analytics Dashboard',
     type: 'Data Visualization',
     description:
       'An interactive analytics dashboard for visualizing user behavior and business metrics. Features real-time data updates, beautiful charts, and exportable reports.',
     fullDescription:
-      'A sophisticated analytics and reporting dashboard built with React and Chart.js. Provides real-time data visualization with interactive charts, customizable widgets, exportable reports, data filtering capabilities, and comprehensive analytics. Designed to help business owners and teams understand their data and make informed decisions quickly.',
+      'A sophisticated analytics and reporting dashboard built with React and Chart.js. Provides real-time data visualization with interactive charts, customizable widgets, exportable reports, and business intelligence insights.',
     stack: ['React', 'Chart.js', 'REST API', 'Node.js', 'PostgreSQL'],
     image: '',
     liveUrl: '',
@@ -64,11 +77,11 @@ export const CASE_STUDIES = [
     timeline: '3 months',
     tools: 'Figma, React, User Testing, CSS',
     challenge:
-      'TaskFlow was a promising productivity tool, but it suffered from poor UX. The dashboard was overwhelming with too many features visible at once. Users reported: confusion about where to start, difficulty finding specific features, and frustration with the lengthy task creation process (average 5 steps). Retention rates were declining month-over-month, and customer feedback indicated the interface was the main pain point.',
+      'TaskFlow was a promising productivity tool, but it suffered from poor UX. The dashboard was overwhelming with too many features visible at once. Users reported confusion about where to start and how to complete tasks efficiently.',
     solution:
-      'I began with comprehensive user research, conducting interviews with 25 power users and analyzing usage patterns. Key insights revealed users wanted simplicity and quick task entry. I created low-fidelity wireframes focusing on progressive disclosure and contextual actions. Using Figma, I built high-fidelity prototypes and tested with 10 users, iterating based on feedback. The final solution featured: a cleaner visual hierarchy, single-page task creation workflow, smart defaults based on usage patterns, context-aware quick actions, and a distraction-free interface.',
+      'I began with comprehensive user research, conducting interviews with 25 power users and analyzing usage patterns. Key insights revealed users wanted simplicity and quick task entry. I created a cleaner information architecture and streamlined the task workflow.',
     results:
-      'Post-launch metrics were impressive: user engagement increased by 40%, task creation time dropped from 4 minutes to 2 minutes (50% improvement), customer satisfaction scores increased by 35%, churn rate decreased by 15%, and daily active users grew by 28%.',
+      'Post-launch metrics were impressive: user engagement increased by 40%, task creation time dropped from 4 minutes to 2 minutes, and satisfaction scores improved significantly.',
     link: '/case-studies/taskflow-ux',
   },
   {
@@ -81,11 +94,11 @@ export const CASE_STUDIES = [
     timeline: '6 months',
     tools: 'React, Node.js, PostgreSQL, Webpack, CDN, Redis',
     challenge:
-      'EasyShop needed to launch with a large product catalog (10,000+ SKUs) and handle seasonal traffic spikes during sales events. Initial performance testing showed the site was slow: 4.5s first contentful paint, poor Core Web Vitals, and high bounce rates. During peak traffic, the site would become unresponsive. The team needed a solution that would scale to handle 10x normal traffic without degradation.',
+      'EasyShop needed to launch with a large product catalog (10,000+ SKUs) and handle seasonal traffic spikes during sales events. Initial performance testing showed the site was slow and under-optimized.',
     solution:
-      'I implemented a multi-layered performance strategy: Frontend: React code splitting, lazy loading for images and components, image optimization (WebP format, proper sizing), CSS optimization. Backend: API response caching with Redis, database query optimization with proper indexes, connection pooling, CDN integration for static assets. Monitoring: Implemented performance monitoring with real-time alerts, regular Lighthouse audits, and load testing.',
+      'I implemented a multi-layered performance strategy: frontend code splitting, lazy loading, image optimization, CDN delivery, caching, and server-side performance tuning.',
     results:
-      'Results exceeded expectations: Achieved 98 Lighthouse score (up from 42), first contentful paint reduced to 0.8s (from 4.5s), Core Web Vitals improved significantly, successfully handled 10x traffic during Black Friday without performance issues, conversion rate increased by 22%, bounce rate decreased by 18%, and user satisfaction scores improved by 31%.',
+      'Results exceeded expectations: achieved a 98 Lighthouse score, reduced first contentful paint to 0.8s, and successfully handled peak demand without instability.',
     link: '/case-studies/easyshop-performance',
   },
 ];

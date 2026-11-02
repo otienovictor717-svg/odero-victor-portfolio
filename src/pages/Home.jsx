@@ -1,142 +1,260 @@
-import React from 'react';
-import { PROJECTS_DETAILED } from '../data/portfolio';
+import React, { useState } from 'react';
+
+const navItems = [
+  { label: 'Home', href: '#home' },
+  { label: 'Shop Products', href: '#products' },
+  { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Contact', href: '#contact' },
+];
+
+const products = [
+  {
+    badge: 'Best Seller',
+    title: 'Luminous Glow Serum',
+    subtitle: 'Vitamin C & Hyaluronic Acid',
+    price: '$48.00',
+    image:
+      'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=500',
+  },
+  {
+    badge: '',
+    title: 'Velvet Matte Lipstick',
+    subtitle: 'Long-lasting nude rose tint',
+    price: '$24.00',
+    image:
+      'https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&q=80&w=500',
+  },
+  {
+    badge: 'Organic',
+    title: 'Botanical Foam Cleanser',
+    subtitle: 'Gentle daily pore purifier',
+    price: '$32.00',
+    image:
+      'https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80&w=500',
+  },
+  {
+    badge: '',
+    title: 'Hydra-Refresh Mist',
+    subtitle: 'Soothing organic rosewater',
+    price: '$28.00',
+    image:
+      'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&q=80&w=500',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Samantha Vance',
+    initials: 'S',
+    message:
+      'The Luminous Glow Serum completely changed my texture within two weeks. My skin has never looked this radiant without makeup!',
+  },
+  {
+    name: 'Maya Lin',
+    initials: 'M',
+    message:
+      'Fast shipping and gorgeous packaging! The Velvet Matte Lipstick stays on all day without drying out my lips. Absolutely obsessed.',
+  },
+  {
+    name: 'Jessica Miller',
+    initials: 'J',
+    message:
+      'Customer support helped me pick the right items for my sensitive skin type. Incredible service and quality products.',
+  },
+];
 
 function Home() {
-  const featured = PROJECTS_DETAILED.slice(0, 3);
-  const stats = [
-    { value: '4+', label: 'Years Building' },
-    { value: '20+', label: 'Projects Shipped' },
-    { value: '100%', label: 'Client Happiness' },
-  ];
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setSubmitted(true);
+  };
 
   return (
-    <>
-      {/* Hero Section */}
-      <section className="hero section">
-        <div className="container hero-grid">
-          <div className="hero-copy">
-            <p className="eyebrow">Frontend Developer • UI Designer</p>
+    <div className="beauty-app">
+      <header className="beauty-header">
+        <div className="beauty-container beauty-header-inner">
+          <a href="#home" className="beauty-brand" aria-label="Go to home page">
+            <span className="beauty-brand-icon">
+              <i className="fa-solid fa-sparkles"></i>
+            </span>
+            Glow &amp; Grace
+          </a>
+
+          <nav className="beauty-nav" aria-label="Main navigation">
+            {navItems.map((item) => (
+              <a href={item.href} key={item.label}>
+                {item.label}
+              </a>
+            ))}
+          </nav>
+
+          <div className="beauty-header-actions">
+            <button className="beauty-cart" aria-label="Shopping cart">
+              <i className="fa-solid fa-bag-shopping"></i>
+              <span className="beauty-cart-badge">2</span>
+            </button>
+            <a href="#products" className="beauty-primary-btn beauty-hidden-mobile">
+              Shop Now
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <section id="home" className="beauty-hero">
+        <div className="beauty-container beauty-hero-grid">
+          <div className="beauty-hero-copy">
+            <span className="beauty-tag">✨ Premium Beauty &amp; Skincare</span>
             <h1>
-              I craft digital experiences that users actually love.
+              Discover Your Natural <span>Radiance</span>
             </h1>
-            <p className="lead">
-              I'm Victor Odero, a frontend developer obsessed with creating beautiful,
-              performant web applications. With over 4 years of experience, I've helped
-              startups and growing companies transform their ideas into polished digital
-              products that drive real business results. I believe great design meets great
-              engineering.
+            <p>
+              Curated collection of cruelty-free skincare, luxury makeup, and organic
+              essentials designed to empower your everyday beauty routine.
             </p>
 
-            <div className="cta-row">
-              <a className="btn btn-primary" href="/projects">
-                See My Work
+            <div className="beauty-hero-actions">
+              <a href="#products" className="beauty-primary-btn">
+                Explore Collection
               </a>
-              <a className="btn btn-secondary" href="/contact">
-                Start a Project
+              <a href="#contact" className="beauty-secondary-btn">
+                Get Consultation
               </a>
-            </div>
-
-            <div className="social-row" aria-label="Social profiles">
-              <a href="https://github.com/otienovictor717-svg" target="_blank" rel="noreferrer">
-                GitHub
-              </a>
-              <a href="mailto:otienovictor717@gmail.com">Email Me</a>
             </div>
           </div>
 
-          <div className="hero-card">
-            <div className="badge">Available for Projects</div>
-            <div className="profile-panel">
-              <div className="avatar">VO</div>
-              <div>
-                <h3>Victor Odero</h3>
-                <p>Product-focused Frontend Engineer</p>
-              </div>
-            </div>
-
-            <div className="mini-stats">
-              {stats.map((stat) => (
-                <div key={stat.label} className="mini-stat">
-                  <strong>{stat.value}</strong>
-                  <span>{stat.label}</span>
-                </div>
-              ))}
+          <div className="beauty-hero-visual">
+            <div className="beauty-image-frame">
+              <img
+                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800"
+                alt="Beauty products showcase"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Projects */}
-      <section className="section alt-section">
-        <div className="container">
-          <p className="section-tag">Featured Work</p>
-          <h2>Projects that shaped how I approach product development.</h2>
+      <section id="products" className="beauty-products">
+        <div className="beauty-container">
+          <div className="beauty-section-heading">
+            <h2>Featured Beauty Essentials</h2>
+            <p>Hand-picked top tier products loved by thousands of beauty enthusiasts.</p>
+          </div>
 
-          <div className="project-grid">
-            {featured.map((project) => (
-              <article key={project.id} className="project-card">
-                <span className="project-type">{project.type}</span>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-
-                <div className="stack-row">
-                  {project.stack.map((item) => (
-                    <span key={item}>{item}</span>
-                  ))}
+          <div className="beauty-product-grid">
+            {products.map((product) => (
+              <article key={product.title} className="beauty-product-card">
+                <div className="beauty-product-image-wrap">
+                  <img src={product.image} alt={product.title} />
+                  {product.badge && <span className="beauty-product-badge">{product.badge}</span>}
                 </div>
+                <h3>{product.title}</h3>
+                <p>{product.subtitle}</p>
 
-                <div className="project-links">
-                  {project.liveUrl && (
-                    <a href={project.liveUrl} target="_blank" rel="noreferrer">
-                      View Live →
-                    </a>
-                  )}
-                  {project.githubUrl && (
-                    <a href={project.githubUrl} target="_blank" rel="noreferrer">
-                      See Code →
-                    </a>
-                  )}
+                <div className="beauty-product-footer">
+                  <span className="beauty-price">{product.price}</span>
+                  <button className="beauty-add-btn" aria-label={`Add ${product.title} to bag`}>
+                    <i className="fa-solid fa-plus"></i>
+                  </button>
                 </div>
               </article>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div style={{ textAlign: 'center', marginTop: '50px' }}>
-            <a href="/projects" className="btn btn-primary">
-              View All Projects →
-            </a>
+      <section id="testimonials" className="beauty-testimonials">
+        <div className="beauty-container">
+          <div className="beauty-section-heading">
+            <h2>Loved by Our Community</h2>
+            <p>See what real women are saying about their skin transformation.</p>
+          </div>
+
+          <div className="beauty-testimonial-grid">
+            {testimonials.map((testimonial) => (
+              <article key={testimonial.name} className="beauty-testimonial-card">
+                <div className="beauty-stars" aria-label="Five star rating">
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                </div>
+
+                <p className="beauty-quote">"{testimonial.message}"</p>
+
+                <div className="beauty-reviewer">
+                  <div className="beauty-avatar">{testimonial.initials}</div>
+                  <div>
+                    <h4>{testimonial.name}</h4>
+                    <span>Verified Buyer</span>
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="section">
-        <div className="container two-column">
-          <div>
-            <p className="section-tag">About</p>
-            <h2>Design thinking meets solid engineering.</h2>
-          </div>
+      <section id="contact" className="beauty-contact">
+        <div className="beauty-container">
+          <div className="beauty-contact-box">
+            <div className="beauty-section-heading beauty-text-center">
+              <h2>Get in Touch</h2>
+              <p>Have questions about your skincare routine or orders? Drop us a line.</p>
+            </div>
 
-          <div>
-            <p>
-              I believe the best products come from combining thoughtful design with
-              strong technical execution. My approach starts with understanding the user,
-              their pain points, and the business objectives. Then I translate that into
-              interfaces that are not only beautiful but highly functional and performant.
-            </p>
-            <p>
-              I'm passionate about clean code, responsive design, accessibility, and
-              creating experiences that make people's lives easier. I stay current with
-              web technologies and best practices because I believe continuous learning
-              is essential in this field.
-            </p>
-            <p>
-              <a href="/resume" style={{ fontWeight: '600' }}>Check my full resume →</a>
-            </p>
+            <form className="beauty-form" onSubmit={handleSubmit}>
+              <div className="beauty-form-grid">
+                <div className="beauty-form-field">
+                  <label htmlFor="name">Full Name</label>
+                  <input id="name" type="text" placeholder="Jane Doe" required />
+                </div>
+
+                <div className="beauty-form-field">
+                  <label htmlFor="email">Email Address</label>
+                  <input id="email" type="email" placeholder="jane@example.com" required />
+                </div>
+              </div>
+
+              <div className="beauty-form-field">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  rows="4"
+                  placeholder="How can we help you today?"
+                  required
+                ></textarea>
+              </div>
+
+              <div className="beauty-form-action">
+                <button type="submit" className="beauty-primary-btn beauty-primary-btn-large">
+                  Send Message
+                </button>
+              </div>
+
+              {submitted && (
+                <div className="beauty-success-message">
+                  Thank you! Your message has been sent successfully.
+                </div>
+              )}
+            </form>
           </div>
         </div>
       </section>
-    </>
+
+      <footer className="beauty-footer">
+        <div className="beauty-container beauty-footer-inner">
+          <p>&copy; 2026 Glow &amp; Grace. All rights reserved.</p>
+          <div className="beauty-socials">
+            <a href="#" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i className="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="TikTok"><i className="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+      </footer>
+    </div>
   );
 }
 
